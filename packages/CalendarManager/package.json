@@ -5,7 +5,7 @@
   "author": "xingyuefeng <15262870437@163.com>",
   "homepage": "https://github.com/xingyuefeng/react-native-advance#readme",
   "license": "ISC",
-  "main": "lib/CalendarManager.js",
+  "main": "lib/index.js",
   "directories": {
     "lib": "lib",
     "test": "__tests__"
