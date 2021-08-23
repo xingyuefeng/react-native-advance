@@ -12,7 +12,7 @@ import calendarmanager from 'calendarmanager';
 
 const App = () => {
   useEffect(() => {
-    calendarmanager.addEvent('Birthday Party', '4 Privet Drive, Surrey');
+    // calendarmanager.addEvent('Birthday Party', '4 Privet Drive, Surrey');
   }, []);
 
   return <SafeAreaView />;

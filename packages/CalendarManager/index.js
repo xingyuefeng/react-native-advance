@@ -4,4 +4,5 @@ const CalendarManager = NativeModules.CalendarManager;
 //   'Birthday Party',
 //   '4 Privet Drive, Surrey'
 // );
+
 export default CalendarManager
