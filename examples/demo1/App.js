@@ -1,21 +1,19 @@
 import React, {useEffect} from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-} from 'react-native';
-import calendarmanager from 'calendarmanager';
+import {SafeAreaView, Text} from 'react-native';
+// import calendarmanaager from 'calendarmanaager';
+import add from 'add';
 
 const App = () => {
   useEffect(() => {
-    // calendarmanager.addEvent('Birthday Party', '4 Privet Drive, Surrey');
+    // console.log(CalendarManager);
+    // CalendarManager.addEvent('Birthday Party', '4 Privet Drive, Surrey');
   }, []);
 
-  return <SafeAreaView />;
+  return (
+    <SafeAreaView>
+      <Text>{add(1, 2, 1, 1)}</Text>
+    </SafeAreaView>
+  );
 };
 
 export default App;
