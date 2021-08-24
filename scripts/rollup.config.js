@@ -14,16 +14,20 @@ function getAllPackages() {
 function getOptions(pkg) {
   // 每个包下的package.json
   const pkgJSON = require(path.join(cwd, 'packages', pkg, 'package.json'));
-  const { dependencies = {}, devDependencies = {}, peerDependencies = {}, main } = pkgJSON;
+  const { dependencies = {}, devDependencies = {}, peerDependencies = {}, main, name } = pkgJSON;
   return {
-    input: path.resolve('.') + '/packages/CalendarManager/index.js',
+    input :path.join(cwd, 'packages', pkg, 'index.js'),
     input:path.join(cwd, '/packages', pkg, '/index.js'),
     external: Object.keys(devDependencies).concat(Object.keys(peerDependencies)),
-    output: {
+    output: [{
       file: path.join(cwd, 'packages', pkg, main),
       format: 'es',
-      exports: "auto",
-    },
+      // exports: "auto",
+    }, {
+      // 打包lib到测试demo
+      file: path.join(cwd, 'examples', 'demo1', 'lib', name, main),
+      format: 'es',
+    }],
     plugins: [resolve(), babel({ babelHelpers: 'bundled' })],
     watch: {}
   }

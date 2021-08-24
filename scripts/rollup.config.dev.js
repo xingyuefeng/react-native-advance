@@ -14,10 +14,10 @@ watcher.on('event', ({ result, code, error, ...others }) => {
   };
 
   if(code === 'BUNDLE_END') {
-    console.log('编译完成...')
+    console.log('编译完成🎉🎉🎉')
   }
   if(code === 'END') {
-    console.log('所有包编译完成...')
+    console.log('所有包编译完成🎉🎉🎉')
   }
   if(code === 'ERROR') {
     console.log('err:', error);
