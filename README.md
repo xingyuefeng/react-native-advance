@@ -1,3 +1,30 @@
+## quick start
+
+1. 安装依赖，根目录运行命令
+
+```bash
+yarn install
+```
+
+ios安装依赖
+
+```bash
+cd examples/demo1/ios
+pod install
+```
+
+2. 启动实时编译包 根目录运行命令
+
+```bash
+npm run watch
+```
+
+3. 打包 根目录运行命令
+
+```bash
+npm run build
+```
+
 ## 开发计划
 
 - [ ] 封装原生日历组件 进行中
